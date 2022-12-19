@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* SESSÂO PRINCIPAL */
+
+.section-1 {
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(to top, transparent 0%, rgb(0, 0, 0) 100%), url(/img/main_background.jpg);
+    background-position: center;
+}
+
+/* NAVBAR PRINCIPAL */
+
+.main-nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 80px 0 80px;
+    color: white;
+}
+
+
+
+.nav-logo {
+    cursor: pointer;
+}
+
+/* LINKS DA NAVBAR */
+
+.nav-btn {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.btn {
+    padding: 30px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn a:hover {
+    color: rgb(167, 165, 165);
+    transition: .4s;
+}
+
+/* USUARIO DA NAVBAR */
+
+.nav-user {
+    width: 40px;
+    height: 40px;
+}
+
+/* CONTEUDO PRINCIPAL SECTION 1 */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 150px;
+}
+
+.main-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 50px 0;
+}
+
+/* BOTOES LOGIN */
+
+.main button {
+    border: none;
+    width: 200px;
+    height: 60px;
+    border-radius: 12px;
+    margin: 20px 0 0 0;
+    background-color: #3167F3;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    color: white;
+}
+
+.left-content {
+    margin-left: 30px;
+}
+
+.right-content {
+    margin-right: 30px;
+}
+
+
+
+.right-content img:hover {
+    transition: .4s;
+    width: 40px;
+}
+
+.social-icon {
+    transition: .4s;
+    width: 30px;
+    margin: 10px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 850px) {
+
+    body {
+        background-color: black;
+    }
+    
+    .section-1 {
+        width: 100%;
+        height: 800px;
+        background-image: linear-gradient(to top, transparent 0%, rgb(0, 0, 0) 100%), url(/img/main_background.jpg);
+        background-position: center;
+    }
+
+    .main-nav {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    
+    
+    .nav-logo {
+        cursor: pointer;
+    }
+    
+    /* LINKS DA NAVBAR */
+    
+    .nav-btn {
+        display: none;
+    }
+    
+
+    
+    /* USUARIO DA NAVBAR */
+    
+    .nav-user {
+        display: none;
+    }
+
+    .right-content img:hover {
+        transition: none;
+        width: 30px;
+    }
+}

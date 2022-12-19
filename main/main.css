@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+
+}
+
+/* DEFININDO UM PADRAO PARA TEXTOS COM LINKS */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* BARRA DE NAVEGAÇÃO */
+
+.navbar {
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* DISTANCIAMENTO DO LOGO */
+
+.nav-logo {
+    margin: 0 0 0 40px;
+}
+
+/* ALINHANDO A PESQUISA */
+
+.search-container {
+    display: flex;
+}
+
+.search {
+    background-color: white;
+    width: 250px;
+    height: 30px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input {
+    border: none;
+}
+
+input::placeholder {
+    border: none;
+}
+
+
+.filter-menu {
+    display: flex;
+    align-items: center;
+    margin: 0 40px 0 0;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.icon-search {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* CARROSSEL */
+
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 320px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #fff;
+}
+
+
+/* SESSAO MARVEL */
+
+/* DEFININDO TAMANHO PADRAO DOS CARDS */
+
+.marvel {
+    background: linear-gradient(180deg, #C70000 0%, #000000 86.98%);
+    width: 100%;
+}
+
+.comic-nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.comic-title {
+    margin-left: 30px;
+}
+
+
+
+.comic-cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.arrow {
+ width: 20px;
+ height: 20px;
+ transition: 1s;
+ cursor: pointer;
+}
+
+.arrow-left:hover {
+    translate: -10px;
+    transition: 1s;
+}
+
+.arrow-right:hover {
+    translate: 10px;
+    transition: 1s;
+}
+
+/* DC */
+
+.dc {
+    background: linear-gradient(180deg, #000000 0%, #07071D 38.02%, #0400C7 100%);
+}
+
+/* ANIMES */
+
+.anime {
+    background: rgb(124,11,212);
+    background: linear-gradient(3deg, rgba(124,11,212,1) 0%, rgba(4,0,199,1) 82%);
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    color: white;
+}
+
+.left-content {
+    margin-left: 30px;
+}
+
+.right-content {
+    margin-right: 30px;
+}
+
+
+
+.right-content img:hover {
+    transition: .4s;
+    width: 40px;
+}
+
+.social-icon {
+    transition: .4s;
+    width: 30px;
+    margin: 10px;
+}
+
+
+
+@media (max-width: 1200px) {
+    
+    .carousel {
+        display: none;
+    }
+
+    .card {
+    display: flex;
+    max-width: 200px;
+    max-height: 300px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;        
+    }
+
+}
+
+@media (max-width: 950px) {
+    
+    .card {
+    display: flex;
+    max-width: 150px;
+    max-height: 250px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;        
+    }
+
+    .right-content img:hover {
+        transition: none;
+        width: 30px;
+    }
+}
+
+@media (max-width: 730px) {
+    
+    .card {
+    display: flex;
+    max-width: 100px;
+    max-height: 200px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;        
+    }
+
+}
+
+@media (max-width: 550px) {
+    
+.search {
+    display: none;
+}
+
+
+.comic-cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    display: none;
+}
+
+    .card {
+    display: flex;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 10px;
+    cursor: pointer;        
+    }
+
+}
